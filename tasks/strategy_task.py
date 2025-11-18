@@ -3,12 +3,16 @@ from agents.strategy_recommender import strategy_recommender
 
 task_strategy = Task(
     description=(
-        "Combine all provided reports for NVIDIA to give a Buy/Sell/Hold recommendation with reasons. "
-        "Evaluate it based on the combined findings."
+        "Provide a final investment recommendation.\n"
+        "Steps:\n"
+        "1. Review financial, market, and risk outputs.\n"
+        "2. Decide whether signals indicate growth or risk.\n"
+        "3. Compare opportunities vs challenges.\n"
+        "4. Give a Buy / Sell / Hold recommendation.\n"
+        "5. Add 2 disclaimer sentences on investment risk."
     ),
     expected_output=(
-        "A final recommendation (Buy/Sell/Hold) for NVIDIA, a summary of the key reasons, "
-        "and two important disclaimers for the investment."
+        "A Buy/Sell/Hold decision with reasoning and 2 disclaimers."
     ),
-    agent=strategy_recommender
+    agent=strategy_recommender,
 )
