@@ -3,13 +3,17 @@ from agents.risk_evaluator import risk_evaluator
 
 task_risk = Task(
     description=(
-        "Identify and evaluate the market, operational, legal, and "
-        "regulatory risks associated with NVIDIA."
+        "Identify business risks.\n"
+        "Steps:\n"
+        "1. Investigate geopolitical, market, and supply-chain risks.\n"
+        "2. Find competitive threats.\n"
+        "3. Review regulatory filings for risk disclosures.\n"
+        "4. Categorize risks as Low, Medium, or High.\n"
+        "5. Provide mitigation suggestions."
     ),
     expected_output=(
-        "A comprehensive summary of potential risks for NVIDIA, including supply chain, "
-        "geopolitical (e.g., related to China), and market competition risks."
+        "A business risk report containing risk types, severity level "
+        "and recommended mitigation strategies."
     ),
     agent=risk_evaluator,
-    context=[]
 )
