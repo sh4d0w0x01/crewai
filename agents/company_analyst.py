@@ -11,13 +11,7 @@ company_analyst = Agent(
         "cash flow statements, and revenue growth patterns."
     ),
     tools=[search_tool],
-    reasoning=(
-        "Think step-by-step:\n"
-        "1. Identify key financial metrics.\n"
-        "2. Compare with last 2 quarters.\n"
-        "3. Evaluate profit margins, cash flow, and growth.\n"
-        "4. Summarize with numeric insights and confidence score."
-    ),
+    reasoning=True,
     memory=True,
     verbose=True,
 )
