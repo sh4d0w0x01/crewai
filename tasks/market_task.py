@@ -3,13 +3,17 @@ from agents.market_analyst import market_analyst
 
 task_market = Task(
     description=(
-        "Analyze the latest market trends, competitive landscape, and economic "
-        "indicators relevant to NVIDIA. Focus on the most recent quarter."
+        "Analyze market trends and sector performance.\n"
+        "Steps:\n"
+        "1. Identify macroeconomic factors affecting the industry.\n"
+        "2. Review demand, sentiment, and growth projections.\n"
+        "3. Compare competitors and their recent changes.\n"
+        "4. Check news coverage & analyst opinions.\n"
+        "5. Provide a short market direction summary."
     ),
     expected_output=(
-        "A concise report on market conditions, competitor performance (like AMD and Intel), "
-        "and overall industry sentiment for the semiconductor and AI sectors."
+        "A concise market insight report: current trend, sector status, "
+        "sentiment, competitors, and direction outlook."
     ),
     agent=market_analyst,
-    context=[]
 )
