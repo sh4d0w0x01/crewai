@@ -5,19 +5,13 @@ search_tool = SerperDevTool()
 
 strategy_recommender = Agent(
     role="Chief Investment Strategist",
-    goal="Combine all analyses to recommend a Buy/Sell/Hold decision.",
+    goal="Provide a Buy/Sell/Hold investment call using all prior outputs.",
     backstory=(
-        "A strategic investor who integrates company performance, market dynamics, "
-        "and risk assessment into a single actionable recommendation."
+        "A financial strategist known for turning research and risk reports "
+        "into actionable investment decisions."
     ),
     tools=[search_tool],
-    reasoning=(
-        "Steps:\n"
-        "1. Review all reports.\n"
-        "2. Weigh risks vs. growth potential.\n"
-        "3. Produce a clear recommendation with reasoning.\n"
-        "4. Include two disclaimers."
-    ),
+    reasoning=True,
     memory=True,
     verbose=True,
 )
