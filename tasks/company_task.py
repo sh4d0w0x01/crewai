@@ -3,14 +3,17 @@ from agents.company_analyst import company_analyst
 
 task_company = Task(
     description=(
-        "Conduct a thorough analysis of NVIDIA's financial health. "
-        "Look at revenue growth, profit margins, and key performance metrics "
-        "from their most recent earnings reports."
+        "Analyze company financial performance.\n"
+        "Steps:\n"
+        "1. Retrieve the latest financial reports.\n"
+        "2. Identify revenue, profit margin, cash flow, debt, and expenses.\n"
+        "3. Compare data with previous 2 quarters.\n"
+        "4. Highlight trends or anomalies.\n"
+        "5. Provide numeric insights with summary."
     ),
     expected_output=(
-        "A detailed report on NVIDIA's financial stability, growth "
-        "prospects, and recent developments, including actual figures."
+        "A structured financial analysis report including metrics, "
+        "trends, and key insights supported with data."
     ),
     agent=company_analyst,
-    context=[]
 )
