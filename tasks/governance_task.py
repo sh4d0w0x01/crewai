@@ -1,15 +1,18 @@
-# tasks/governance_task.py
 from crewai import Task
-from agents.strategy_recommender import strategy_recommender  # reuse strategist for combining
-# Optionally create a separate governance strategist; reusing strategy_recommender keeps code minimal.
+from agents.strategy_recommender import strategy_recommender
 
 task_governance = Task(
     description=(
-        "Combine compliance, security risk, and regulatory reports into a single GRC assessment and prioritized remediation roadmap."
+        "Create a full GRC (Governance, Risk, Compliance) overview.\n"
+        "Steps:\n"
+        "1. Summarize compliance, cyber, and regulatory reports.\n"
+        "2. Identify top 3 highest risks.\n"
+        "3. Create risk mitigation roadmap.\n"
+        "4. Assign priority levels.\n"
+        "5. Provide final GRC status score."
     ),
     expected_output=(
-        "A governance and risk report summarizing compliance gaps, cyber risks, regulatory exposures, prioritized recommendations, "
-        "and an overall GRC rating."
+        "A structured GRC report with priority roadmap and overall posture rating."
     ),
-    agent=strategy_recommender  # could be a separate agent like 'governance_strategist'
+    agent=strategy_recommender,
 )
