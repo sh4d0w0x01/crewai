@@ -11,13 +11,7 @@ market_analyst = Agent(
         "and competitive forces affecting company growth."
     ),
     tools=[search_tool],
-    reasoning=(
-        "Process:\n"
-        "1. Retrieve current market trends.\n"
-        "2. Analyze competitors (AMD, Intel, etc.).\n"
-        "3. Assess sentiment from recent news.\n"
-        "4. Output concise insights with market direction."
-    ),
+    reasoning=True,
     memory=True,
     verbose=True,
 )
